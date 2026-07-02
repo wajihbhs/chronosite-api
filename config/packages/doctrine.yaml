@@ -8,9 +8,8 @@ doctrine:
 
         profiling_collect_backtrace: '%kernel.debug%'
     orm:
-        auto_generate_proxy_classes: true #map entityName(entity) to entity_name (database)
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         validate_xml_mapping: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore
         identity_generation_preferences:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
