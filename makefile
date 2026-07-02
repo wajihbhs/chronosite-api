@@ -31,7 +31,6 @@ setup: ## 🚀 Installation complète (à lancer une seule fois)
 	docker compose up -d
 	$(PHP) composer install
 	$(CONSOLE) doctrine:database:create --if-not-exists
-	$(CONSOLE) doctrine:migrations:migrate --no-interaction
 	@echo "\n  ✅ Prêt ! API disponible sur http://localhost:8080\n"
 
 start: ## ▶️  Démarrer les conteneurs (commande du quotidien)
