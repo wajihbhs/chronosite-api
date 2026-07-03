@@ -1,2 +1,3 @@
 employee.badge_number.duplicate: "Ce matricule est déjà utilisé."
+employee.not_found: "L'employé #{id} est introuvable"
 

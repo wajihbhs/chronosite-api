@@ -1,2 +1,2 @@
 employee.badge_number.duplicate: "This badge number is already taken."
-
+employee.not_found: "The employee #{id} is not found"
