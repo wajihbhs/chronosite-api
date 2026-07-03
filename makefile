@@ -79,6 +79,17 @@ require: ## Ajouter un package   ex: make require PKG="symfony/orm-pack"
 require-dev: ## Ajouter un package dev   ex: make require-dev PKG="symfony/test-pack"
 	$(PHP) composer require --dev $(PKG)
 
+# ── Fixtures ────────────────────────────────────────────────────────────
+
+fixtures: ## Charger les fixtures
+	$(CONSOLE) doctrine:fixtures:load --no-interaction
+
+fixtures.init: ## Remettre la base a zero et charger les fixtures
+	$(CONSOLE) doctrine:database:drop --force --if-exists
+	$(CONSOLE) doctrine:database:create
+	$(CONSOLE) doctrine:migrations:migrate --no-interaction
+	$(CONSOLE) doctrine:fixtures:load --no-interaction
+
 # ── Base de données ────────────────────────────────────────────────────────────
 
 db-create: ## Créer la base de données
