@@ -1,0 +1,7 @@
+employee.first_name.required: "Le prénom est obligatoire."
+employee.first_name.length: "Le prénom doit faire entre {min} et {max} caractères."
+employee.last_name.required: "Le nom est obligatoire."
+employee.last_name.length: "Le nom doit faire entre {min} et {max} caractères."
+employee.badge_number.required: "Le matricule est obligatoire."
+employee.badge_number.format: "Le matricule doit contenir uniquement des majuscules, chiffres et tirets."
+
